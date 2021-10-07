@@ -42,26 +42,26 @@ Ejercicio 5:
 // Solicitar Apellidos
 // Regresar nombre minusculas y apellidos mayusculas
 
-//const nombre = prompt('Ingrese su nombre');
-//const nuevoNombre = nombre.toLowerCase();
+const nombre = prompt('Ingrese su nombre');
+const nuevoNombre = nombre.toLowerCase();
 
-//const lastName = prompt('Ingrese su Apellido');
-//const newLastName = lastName.toUpperCase();
+const lastName = prompt('Ingrese su Apellido');
+const newLastName = lastName.toUpperCase();
 
-//console.log (`${nuevoNombre} ${newLastName}`);
+console.log (`${nuevoNombre} ${newLastName}`);
 
 
 /*-------------------Ejercicio2--------------------*/
 
 
-//let nombre = window.prompt("Ingrese su nombre").toLowerCase();    
-//console.log (nombre);
+let nombre = window.prompt("Ingrese su nombre").toLowerCase();    
+console.log (nombre);
 
 /*-------------------Ejercicio 3---------------------------*/
 
-//const nombre = window.prompt("Ingrese su nombre completo")
-//const result = nombre.match(/[aeiou]/gi).length;
-//console.log (result);
+const nombre = window.prompt("Ingrese su nombre completo")
+const result = nombre.match(/[aeiou]/gi).length;
+console.log (result);
 
 /*-------------------Ejercicio 4---------------------------*/
 
@@ -78,6 +78,15 @@ const word1 = prompt('Ingrese una palabra');
 const word2 = prompt('Ingrese otra palabra');
 
 
-
+function word () {
+    if (word1.length > word2.length){
+        console.log(word1)
+    } else if (word1.length < word2.length) {
+        console.log(word2)
+    }else {
+        console.log('Las palabras ingresadas son iguales')
+    }
+}
+word()
 
                            
