@@ -93,18 +93,21 @@ const mentorsArray = [
 
     */
   let tablaMentor = document.getElementById("mentores"); 
-  let tablebody = document.createElement('tbody') 
+  let tablebody = document.createElement('tbody') ;
+  const inputs = document.querySelectorAll('input');
+  
 
-  mentorsArray.forEach( Mentor => { 
+
+  mentorsArray.forEach((Mentor, index) => { 
 
     let row = document.createElement('tr'); 
     let td = document.createElement('td'); 
     let avg = 0
 
                 /*Iteramos nombres*/
-
-    td.innerText = Mentor.name; 
-    row.appendChild(td); 
+    
+    // td.innerText = Mentor.name; 
+    // row.appendChild(td); 
 
                 /*Iteramos Materias*/
      
@@ -128,13 +131,30 @@ const mentorsArray = [
 
                 /* Creamos Botones */
 
-   const button = document.createElement('button')
-   button.type = 'button'
-   button.innerText = 'click'
-   row.appendChild(button)
-   tablebody.appendChild(row)
+   const button = document.createElement('button');
+   button.setAttribute('data-person', index);
+    button.type = 'button'
+    button.innerText = 'delete'
+    row.appendChild(button)
+    tablebody.appendChild(row)
+    button.addEventListener('click', (event) =>{
+        button.closest('tr').remove();
+    })
   })
   
-  button.classlist.add('boton');
-    
+ 
+  const createMentor (() => {
+    let allMentors = []
+      const nameMentor = {
+          name: '',
+          html: '',
+          css: '',
+          js: '',
+          react: '',
+      }
+      inputs.forEach((input) => {
+        createMentor[input.name] = input.value;
+      }  
+  })
+  allMentors.push(nameMentor)
 
