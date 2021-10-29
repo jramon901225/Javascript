@@ -142,9 +142,9 @@ const mentorsArray = [
     })
   })
   
+  let allMentors = []
  
-  const createMentor (() => {
-    let allMentors = []
+  const createMentor (input) => {
       const nameMentor = {
           name: '',
           html: '',
@@ -154,7 +154,8 @@ const mentorsArray = [
       }
       inputs.forEach((input) => {
         createMentor[input.name] = input.value;
-      }  
-  })
-  allMentors.push(nameMentor)
+      }  )
+      allMentors.push(nameMentor)
+  }
+ 
 
